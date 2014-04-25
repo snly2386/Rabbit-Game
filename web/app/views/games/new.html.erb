@@ -1,0 +1,27 @@
+<h1> CREATE A GAME!! </h1>
+<% if @error %>
+  <%=flash[:error]%>
+  <% end %>
+
+<%= form_tag("/games/create", method: "post") do %>
+ 
+ <%= label_tag("players[]", "Player Name: ") %>
+ <%= text_field_tag("players[]") %><br>
+
+ <%= label_tag("players[]", "Player Name: ") %>
+ <%= text_field_tag("players[]") %><br>
+
+ <%= label_tag("players[]", "Player Name: ") %>
+ <%= text_field_tag("players[]") %><br>
+
+ <%= label_tag("players[]", "Player Name: ") %>
+ <%= text_field_tag("players[]") %><br>
+
+ <%= label_tag("players[]", "Player Name: ") %>
+ <%= text_field_tag("players[]") %><br>
+
+ <%= label_tag("players[]", "Player Name: ") %>
+ <%= text_field_tag("players[]") %><br>
+
+ <%= submit_tag("Create Game") %>
+<% end %>

@@ -1,4 +1,27 @@
 Rails.application.routes.draw do
+  # get 'game/new', to: 'game#new'
+  # post 'game/create', to: 'game#create'
+  # get 'game/show/:id', to: 'game#show'
+  # put 'game/update', to: 'game#update'
+
+
+  # GET 'games' - index
+  # GET 'games/new' - new
+  # POST 'games' - create
+  # GET 'games/3' - show
+  # PUT 'games/3' - update
+  # DELETE 'games/3' - destroy
+
+  # resources :games, :only => [:new, :create, ...]
+  # resources :games, :except => [:index, :destroy]
+  # get 'games', to: 'games#index'
+  # root 'games#new'
+  get 'games/new', to: 'games#new'
+  post 'games/create', to: 'games#create'
+  get 'games/:id', to: 'games#show'
+  put 'games/:id', to: 'games#update'
+  # delete 'games/:id', to: 'games#destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

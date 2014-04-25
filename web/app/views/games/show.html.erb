@@ -1,0 +1,12 @@
+<H1> GAME ID: <h1>
+
+<%= form_tag("/games/#{@game.id}", method: "put") do %>
+  <input type="hidden" name="move" value="stop" />
+<%= submit_tag("Roll Dice") %>
+
+<% end %>
+
+<%= form_tag("/games/#{@game.id}", method: "put") do %>
+  <input type="hidden" name="move" value="stop" />
+<%= submit_tag("Stop") %>
+<% end %>
