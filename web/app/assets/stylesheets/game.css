@@ -1,0 +1,77 @@
+
+body {
+  background-color: black;
+}
+
+.container {
+  background-image: url(http://oldcatman-xxx.com/wp-content/uploads/2013/03/bunny_hop_animation_by_jekupeku-d4n4t59.gif);
+  height: 1000px;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: 100%;
+  background-border: 10px solid black;
+}
+
+.title {
+  font-family: 'Nosifer', 'cursive';
+  color: #8F061D;
+  font-size: 80px;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
+.odd {
+  font-family: 'Nosifer', 'cursive';
+  color: black;
+}
+
+.dice img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.but {
+  padding-top: 200px;
+}
+
+.btn {
+  text-align: center;
+  width: 200px;
+  border: 1px solid black;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   background: #ffffff;
+   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
+   background: -webkit-linear-gradient(top, #ffffff, #ffffff);
+   background: -moz-linear-gradient(top, #ffffff, #ffffff);
+   background: -ms-linear-gradient(top, #ffffff, #ffffff);
+   background: -o-linear-gradient(top, #ffffff, #ffffff);
+   padding: 19px 38px;
+   -webkit-border-radius: 21px;
+   -moz-border-radius: 21px;
+   border-radius: 21px;
+ /*  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;*/
+  /* box-shadow: rgba(0,0,0,1) 0 1px 0;*/
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #ff0d0d;
+   font-size: 19px;
+   font-family: 'Nosifer', 'cursive';
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.btn:hover {
+   background: #8F061D;
+   color: #000000;
+   }
+.btn:active {
+   background: #5daee3;
+   }
+
+--------------------------------------
+
+

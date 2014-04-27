@@ -15,11 +15,12 @@ Rails.application.routes.draw do
   # resources :games, :only => [:new, :create, ...]
   # resources :games, :except => [:index, :destroy]
   # get 'games', to: 'games#index'
-  # root 'games#new'
+  root 'games#index'
   get 'games/new', to: 'games#new'
   post 'games/create', to: 'games#create'
   get 'games/:id', to: 'games#show'
   put 'games/:id', to: 'games#update'
+  get 'games/winner',to: 'games#winner' 
   # delete 'games/:id', to: 'games#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.

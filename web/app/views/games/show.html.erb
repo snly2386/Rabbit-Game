@@ -1,12 +1,33 @@
-<H1> GAME ID: <h1>
+<h1> GAME ID: <%=@game.id%> </h1>
+  <% if @error %>
+  <%= flash[:error] %>
+  <%end%>
+  <h3> List of Players: </h3>
+  <% @players.each do |player| %>
+  <li>
+  <ul> <%=player%> </ul>
+</li>
+  <% end %> 
+
+  <h4> Current Player: <%= @current_player %>  <br/>Score: <%=@score%> <br/> Wounds: <%=@wounds%> </h4>
+  <% if @last_turn.rolls != [] %>
+
+  <h4> Roll Result: <% @last_turn.rolls.last.results.each do |die| %> </h4>
+  <ul> 
+    <li> <%= die.color %>: <%= die.type %> </li>
+  </ul>
+  <% end %>
+  <% end %>
+
 
 <%= form_tag("/games/#{@game.id}", method: "put") do %>
-  <input type="hidden" name="move" value="stop" />
+  <%= hidden_field_tag("move", "roll_dice") %>
+
 <%= submit_tag("Roll Dice") %>
 
 <% end %>
 
 <%= form_tag("/games/#{@game.id}", method: "put") do %>
-  <input type="hidden" name="move" value="stop" />
+ <%= hidden_field_tag("move", "stop") %>
 <%= submit_tag("Stop") %>
 <% end %>
