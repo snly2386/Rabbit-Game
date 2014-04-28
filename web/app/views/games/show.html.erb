@@ -1,4 +1,4 @@
-<h1> GAME ID: <%=@game.id%> </h1>
+<div class="showcontainer"> GAME ID: <%=@game.id%> 
   <% if @error %>
   <%= flash[:error] %>
   <%end%>
@@ -31,3 +31,5 @@
  <%= hidden_field_tag("move", "stop") %>
 <%= submit_tag("Stop") %>
 <% end %>
+
+</div>

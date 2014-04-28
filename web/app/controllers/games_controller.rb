@@ -38,6 +38,7 @@ class GamesController < ApplicationController
   def winner
     @game = RabbitDice.db.get_game(params[:id].to_i)
     @winner = @game.winner 
+    # flash[:success]
 
   end
   
@@ -45,11 +46,11 @@ class GamesController < ApplicationController
   def update
     move = params[:move]
     @result = RabbitDice::PlayMove.run(:game_id => params[:id].to_i, :move => params[:move]) 
-    if @result.error == :game_over
-      flash[:success] = "You won!"
-      redirect_to "games/winner"
+    @game = RabbitDice.db.get_game(params[:id].to_i)
+    if @game.winner != nil 
+      redirect_to "/games/winner/#{@game.id}"
     elsif @result.success? 
-      flash[:success] = 'You moved~!'
+      # flash[:success] = 'You moved~!'
       redirect_to "/games/#{@result.game.id}"
     else 
       @error = @result.error

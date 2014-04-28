@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   post 'games/create', to: 'games#create'
   get 'games/:id', to: 'games#show'
   put 'games/:id', to: 'games#update'
-  get 'games/winner',to: 'games#winner' 
+  get 'games/winner/:id',to: 'games#winner' 
   # delete 'games/:id', to: 'games#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.

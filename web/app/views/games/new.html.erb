@@ -1,27 +1,35 @@
-<h1> CREATE A GAME!! </h1>
+<div class="newcontainer"> 
+  <div class="create">Create a Game</div> 
 <% if @error %>
   <%=flash[:error]%>
   <% end %>
-
+<div class="register"><button id="reg">
+  REGISTER PLAYERS</button>
+</div>
+<div class="newform">
 <%= form_tag("/games/create", method: "post") do %>
  
- <%= label_tag("players[]", "Player Name: ") %>
+ <%= label_tag("players[]", "Enter Your Name: ") %>
+ <%= text_field_tag ("players[]") %><br>
+
+ <%= label_tag("players[]", "Enter Your Name: ") %>
+ <%= text_field_tag("player[]") %><br>
+
+ <%= label_tag("players[]", "Enter Your Name: ") %>
  <%= text_field_tag("players[]") %><br>
 
- <%= label_tag("players[]", "Player Name: ") %>
+ <%= label_tag("players[]", "Enter Your Name: ") %>
  <%= text_field_tag("players[]") %><br>
 
- <%= label_tag("players[]", "Player Name: ") %>
+ <%= label_tag("players[]", "Enter Your Name: ") %>
  <%= text_field_tag("players[]") %><br>
 
- <%= label_tag("players[]", "Player Name: ") %>
+ <%= label_tag("players[]", "Enter Your Name: ") %>
  <%= text_field_tag("players[]") %><br>
 
- <%= label_tag("players[]", "Player Name: ") %>
- <%= text_field_tag("players[]") %><br>
+ <%= submit_tag("Create Game", :class => "class") %>
 
- <%= label_tag("players[]", "Player Name: ") %>
- <%= text_field_tag("players[]") %><br>
-
- <%= submit_tag("Create Game") %>
 <% end %>
+</div>
+
+</div>
