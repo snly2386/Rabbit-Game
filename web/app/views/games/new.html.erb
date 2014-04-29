@@ -10,12 +10,6 @@
 <%= form_tag("/games/create", method: "post") do %>
  
  <%= label_tag("players[]", "Enter Your Name: ") %>
- <%= text_field_tag ("players[]") %><br>
-
- <%= label_tag("players[]", "Enter Your Name: ") %>
- <%= text_field_tag("player[]") %><br>
-
- <%= label_tag("players[]", "Enter Your Name: ") %>
  <%= text_field_tag("players[]") %><br>
 
  <%= label_tag("players[]", "Enter Your Name: ") %>
@@ -27,7 +21,13 @@
  <%= label_tag("players[]", "Enter Your Name: ") %>
  <%= text_field_tag("players[]") %><br>
 
- <%= submit_tag("Create Game", :class => "class") %>
+ <%= label_tag("players[]", "Enter Your Name: ") %>
+ <%= text_field_tag("players[]") %><br>
+
+ <%= label_tag("players[]", "Enter Your Name: ") %>
+ <%= text_field_tag("players[]") %><br>
+ 
+ <%= submit_tag("Create Game", :class=>"class") %>
 
 <% end %>
 </div>
