@@ -201,27 +201,58 @@ body {
   background: #5daee3;
   }
 
-@media only screen and (max-width: 1250px) {
+  /*---------------winner-----------------*/
 
-  .title1 {
-    font-size:4.5em;
-  }
+.winnercontainer {
+  background-image: url('http://oldcatman-xxx.com/wp-content/uploads/2013/03/bunny_hop_animation_by_jekupeku-d4n4t59.gif');
+  height: 900px;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
-@media only screen and (max-width: 950px) {
-  .btn {
-  font-size: 15px;
+
+.winner {
+  font-family: 'Nosifer', 'cursive';
+  margin: auto;
+  width: 50%;
+  color: #800000;
   text-align: center;
-  }
+  font-size: 80px;
 }
 
-@media only screen and (max-width: 950px) {
-  .title1 {
-  font-size: 3.5em;
-  width: 100px;
-  padding-left:10px;
-  }
-
+.playagain {
+  margin: auto;
+  width: 50%;
+  padding-left: 500px;
+  padding-top: 300px;
 }
+
+.play {
+   border-top: 1px solid black;
+   background: transparent;
+   padding: 20px 40px;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #000000;
+   font-size: 20px;
+   font-family: 'Nosifer', 'cursive';
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.play:hover {
+   border-top-color: #800000;
+   background: #800000;
+   color: #f7f7f7;
+   }
+.play:active {
+   border-top-color: #000000;
+   background: #000000;
+   }
+  /*---------------media------------------/*
 
 @media only screen and (max-width: 1400px) {
   .create {
@@ -232,6 +263,29 @@ body {
   padding-left: 80px;
   }
 }
+@media only screen and (max-width: 1250px) {
+
+  .title1 {
+    font-size:4.5em;
+  }
+  .winner {
+  color: green;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .btn {
+  font-size: 15px;
+  text-align: center;
+  }
+   .title1 {
+  font-size: 3.5em;
+  width: 100px;
+  padding-left:10px;
+  }
+
+}
+
+
 
 @media only screen and (max-width: 900px) {
   .create {
@@ -305,5 +359,9 @@ body {
   background: -webkit-linear-gradient(top, rgb(19, 6, 6), #6B2121);
   color: #C24242;
   }
+
+
+
+
 
 
