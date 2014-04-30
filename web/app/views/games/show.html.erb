@@ -1,4 +1,4 @@
-<div class="showcontainer"> GAME ID: <%=@game.id%> 
+<div class="showcontainer"> GAME ID: <%=@game.id%>
   <% if @error %>
   <%= flash[:error] %>
   <%end%>
@@ -7,29 +7,35 @@
   <li>
   <ul> <%=player%> </ul>
 </li>
-  <% end %> 
+  <% end %>
 
-  <h4> Current Player: <%= @current_player %>  <br/>Score: <%=@score%> <br/> Wounds: <%=@wounds%> </h4>
+  <h4 class= "showtitle"> Current Player: <%= @current_player %> </h4>
+
+  <div class= "show_buttons">
+    <%= form_tag("/games/#{@game.id}", method: "put") do %>
+      <%= hidden_field_tag("move", "roll_dice") %>
+
+    <%= submit_tag("Roll Dice", :class=> "roll") %>
+
+    <% end %>
+
+    <%= form_tag("/games/#{@game.id}", method: "put") do %>
+     <%= hidden_field_tag("move", "stop") %>
+    <%= submit_tag("Stop", :class=> "roll") %>
+  </div>
+
+
+  <div class= "score"> <br/>Score: <%=@score%> <br/> Wounds: <%=@wounds%> </div>
   <% if @last_turn.rolls != [] %>
 
   <h4> Roll Result: <% @last_turn.rolls.last.results.each do |die| %> </h4>
-  <ul> 
-    <li> <%= die.color %>: <%= die.type %> </li>
+  <ul>
+    <li style="color: <%= die.color %>; "> <%= die.color %>: <%= die.type %> </li>
   </ul>
   <% end %>
   <% end %>
 
 
-<%= form_tag("/games/#{@game.id}", method: "put") do %>
-  <%= hidden_field_tag("move", "roll_dice") %>
-
-<%= submit_tag("Roll Dice") %>
-
-<% end %>
-
-<%= form_tag("/games/#{@game.id}", method: "put") do %>
- <%= hidden_field_tag("move", "stop") %>
-<%= submit_tag("Stop") %>
 <% end %>
 
 </div>
