@@ -3,36 +3,13 @@
   <%= flash[:error] %>
   <%end%>
   <h3> List of Players: </h3>
-    <div id= "players"> </div>
+  <% @players.each do |player| %>
+  <li>
+  <ul> <%=player%> </ul>
+</li>
+  <% end %>
 
-  <script type = "text/javascript">
-
-
-    var url = "/games/<%=game.id %>"
-    $(function(){
-      $.get(url, function(data){
-        for (var i=0; i <data.players.length; i++){
-          $("#players").append("<p>" +data.players[i] + "</p>")
-        }
-      }, "json");
-
-      $('.roll').on('click', function(){
-        $.post(url, function(data){
-          console.log(data.game)
-          $('.current_player').html(data.current_player)
-
-        }, "json")
-      });
-
-    })
-  </script>
-
-
-
-
-
-
-  <h4 class= "showtitle"> Current Player: <%= @current_player %><span class = "current_player"</span> </h4>
+  <h4 class= "showtitle"> Current Player: <%= @current_player %> </h4>
 
   <div class= "show_buttons">
     <%= form_tag("/games/#{@game.id}", method: "put") do %>
@@ -62,3 +39,4 @@
 <% end %>
 
 </div>
+
