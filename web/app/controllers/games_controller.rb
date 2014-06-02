@@ -38,7 +38,7 @@ class GamesController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json {render :json => {game: @game, players: @players, current_player: @current_player, wounds: @wonuds, score: @score, :results: @results}}
+      format.json {render :json => {game: @game, players: @players, current_player: @current_player, wounds: @wonuds, score: @score, results: @results}}
     end
 
   end
